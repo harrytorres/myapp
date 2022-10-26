@@ -1,0 +1,14 @@
+//= link_tree ../images
+//= link_directory ../images/carousel .jpg
+//= link_directory ../stylesheets .css 
+//= link_directory ../js bootstrap.min.js 
+//= link_directory ../js jquery-ui.min.js 
+//= link_directory ../js jquery.elevateZoom-3.0.8.min.js 
+//= link_directory ../js jquery.meanmenu.js 
+//= link_directory ../js owl.carousel.min.js 
+//= link_directory ../js wow.min.js 
+//= link_directory ../js jquery-1.12.0.min.js 
+//= link_directory ../js modernizr-2.8.3.min.js 
+//= link_directory ../js .js 
+//= link_tree ../../javascript .js
+//= link_tree ../../../vendor/javascript .js

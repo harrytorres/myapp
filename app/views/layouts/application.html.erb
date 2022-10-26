@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= javascript_pack_tag 'application' %>
+    <%= javascript_include_tag "jquery-1.12.0.min" %>
+    <%= javascript_include_tag "jquery-ui.min" %>
+    <%= javascript_include_tag "jquery.elevateZoom-3.0.8.min" %>
+    <%= javascript_include_tag "jquery.meanmenu" %>
+
+    <%= javascript_include_tag "bootstrap.min" %>
+      
+    <%= javascript_include_tag "plugins" %>
+    <%= javascript_include_tag "wow.min" %>
+    <%= javascript_include_tag "modernizr-2.8.3.min" %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "main" %>
+    <%= javascript_include_tag "carousel" %>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  </head>
+
+  <body>
+      <header class="header-pos">
+            <%= render(NavbarComponent.new(classname: "li-custom")) %>  
+      </header>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <%= yield %>
+       <footer>
+            <%= render(FooterComponent.new()) %>  
+       </footer>
+
+
+
+  </body>
+</html>

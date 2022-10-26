@@ -1,0 +1,40 @@
+
+
+
+
+  <div class="wishlist-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="wishlist-content">
+							<form action="#">
+								<div class="wishlist-table table-responsive">
+									<table>
+										<thead>
+											<tr>
+												<th class="product-remove"><span class="nobr">Remove</span></th>
+												<th class="product-name"><span class="nobr">User</span></th>
+												<th class="product-price"><span class="nobr">Name</span></th>
+												<th class="product-stock-stauts"><span class="nobr"> Description </span></th>
+												<th class="product-add-to-cart"><span class="nobr"> Action </span></th>
+											</tr>
+										</thead>
+										<tbody>
+                    						<% @project.each do |project| %>
+												<tr>
+													<td ><%= render(DeleteBtnComponent.new(project: project))%></td>
+													<td class="product-thumbnail"><a href="#"><%= project.user_id %></a></td>
+													<td class="product-name"><a href="#"><%= project.name %></a></td>
+													<td class="product-stock-status"><span class="wishlist-in-stock"><%= project.description %></span></td>
+													<td ><%= render(ButtonComponent.new(classname: "product-add-to-cart", project: project)) %></td>
+												</tr>
+											<% end %>
+										</tbody>
+									</table>
+								</div>	
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
